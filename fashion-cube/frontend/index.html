@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASHION CUBE · Premium Store</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+    <!-- Main App Container -->
+    <div id="app">
+        <!-- Header -->
+        <header id="main-header">
+            <div class="brand-header">
+                <div class="brand" id="homeBtn">FASHION <span>CUBE</span></div>
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search products...">
+                        <i class="fas fa-search" id="searchBtn"></i>
+                    </div>
+                    <span class="nav-link" id="ordersNav" data-page="orders">📦 Orders</span>
+                    <div id="userDisplay" class="user-info" style="display:none;">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userNameDisplay">User</span>
+                    </div>
+                    <i class="far fa-user" id="authIcon" title="Account"></i>
+                    <i class="far fa-heart" id="wishlistIcon" title="Wishlist"></i>
+                    <i class="fas fa-shopping-bag" id="cartIcon" title="Cart">
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Pages will be loaded dynamically -->
+            <div id="home" class="page active">
+                <p>Loading...</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer (outside #app so it can span the full screen width) -->
+    <footer id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <h4>FASHION CUBE</h4>
+                    <p>Your premium fashion destination. Quality products, amazing prices, and exceptional service.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="#" data-page="home">Home</a>
+                    <a href="#" data-page="orders">My Orders</a>
+                    <a href="#" data-page="wishlist">Wishlist</a>
+                    <a href="#" data-page="profile">My Account</a>
+                </div>
+                <div>
+                    <h4>Customer Service</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Returns & Refunds</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> support@fashioncube.com</p>
+                    <p><i class="fas fa-phone"></i> +91 1800-123-456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 FASHION CUBE. All rights reserved. Made with ❤️ in India.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="auth-overlay">
+        <div class="auth-box">
+            <button class="auth-close" id="authClose">&times;</button>
+            <h2 id="authTitle">Sign In</h2>
+            <input type="email" id="authEmail" placeholder="Email address">
+            <input type="password" id="authPassword" placeholder="Password">
+            <div class="otp-section-auth" id="otpSectionAuth">
+                <input type="text" id="authOtp" placeholder="Enter OTP" maxlength="6">
+            </div>
+            <button class="btn-auth" id="authSubmit">Sign In</button>
+            <div class="auth-toggle">
+                <span id="authToggle">Don't have an account? Sign Up</span>
+            </div>
+            <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #888; text-align: center;">
+                <span id="authStatus">Enter your credentials</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
