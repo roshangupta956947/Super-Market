@@ -22,5 +22,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshangupta956947/Super-Market.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roshangupta956947/Super-Market/issues"
+  },
+  "homepage": "https://github.com/roshangupta956947/Super-Market#readme"
 }

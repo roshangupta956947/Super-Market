@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 // FRONTEND_URL can be a single origin or a comma-separated list
 // (e.g. your Netlify URL) — set it in Render's environment variables.
 const allowedOrigins = [
-    'http://localhost:5000',
+    'https://super-market-udbf.onrender.com',
     'http://localhost:3000',
     'http://127.0.0.1:5500',
     ...(process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',').map(u => u.trim()) : [])
@@ -62,8 +62,8 @@ app.use(errorHandler);
 // Start server
 app.listen(PORT, () => {
     console.log('\n🚀 FASHION CUBE Backend Server');
-    console.log(`📡 Server running on http://localhost:${PORT}`);
-    console.log(`📦 API URL: http://localhost:${PORT}/api`);
-    console.log(`🔗 Frontend: http://localhost:${PORT}`);
+    console.log(`📡 Server running on https://super-market-udbf.onrender.com`);
+    console.log(`📦 API URL: https://super-market-udbf.onrender.com/api`);
+    console.log(`🔗 Frontend: https://super-market-udbf.onrender.com`);
     console.log('✨ Ready to accept requests!\n');
 });
